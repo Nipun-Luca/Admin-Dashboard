@@ -61,7 +61,8 @@ img {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 10px;
 }
 
 form {
@@ -80,9 +81,6 @@ form input[type="text"] {
     margin: 0;
     border-radius: 50px;
 }
-
-
-
 
 form input[type="submit"] {
     background-image: url("icons/magnify.svg");
@@ -104,10 +102,30 @@ form input[type="submit"] {
 }
 
 
+
 /* Profile */
-.profile-container {
+.profile-header {
     grid-column: 2/4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
 }
+
+.profile-header > .button-container > button {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    padding: none;
+}
+
+.profile-intro > * {
+    margin: 0;
+    padding: 0;
+}
+
 
 .projects-container {
     grid-row: 3/5;
