@@ -58,8 +58,53 @@ img {
 /* Header */
 .header {
     grid-column: 2/4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
+form {
+    display: flex;
+    width: 100%;
+    max-width: 500px; /* Use max-width instead of width */
+    justify-content: center;
+    align-items: center;
+}
+
+form input[type="text"] {
+    min-width: 100px; /* Set a minimum width */
+    max-width: 100%; /* Add max-width to prevent it from going out of the grid */
+    flex: 1;
+    padding: 5px;
+    margin: 0;
+    border-radius: 50px;
+}
+
+
+
+
+form input[type="submit"] {
+    background-image: url("icons/magnify.svg");
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Profile */
 .profile-container {
     grid-column: 2/4;
 }
