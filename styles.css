@@ -2,6 +2,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+p {
+    margin: 0;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -13,8 +17,8 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 250px 3fr 1fr;
-    grid-template-rows: 70px 70px 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
 }
 
 
@@ -62,7 +66,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px;
+    padding: 15px;
 }
 
 form {
@@ -95,12 +99,20 @@ form input[type="submit"] {
 }
 
 .header > div {
-    height: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.header > div > img {
+    width: 25px;
+    height: 25px;
+}
+
+.circle > img {
+    height: 30px;
+    width: auto;
+}
 
 
 /* Profile */
@@ -110,7 +122,7 @@ form input[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px;
+    padding: 15px;
 }
 
 .profile-header > .button-container > button {
@@ -126,7 +138,43 @@ form input[type="submit"] {
     padding: 0;
 }
 
+.profile-intro > p {
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    gap: 5px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* Projects */
+.projects {
+    background-color: bisque;
+    grid-row: 3/5;
+}
+
+.headline {
+    padding: 15px;
+    font-weight: bold;
+}
 
 .projects-container {
-    grid-row: 3/5;
+    flex: 1;
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: aliceblue;
+    height: 100px;
+    width: 100px;
 }
