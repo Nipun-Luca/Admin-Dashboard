@@ -1,5 +1,10 @@
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+:root {
+    font-size: 1em;
 }
 
 p {
@@ -41,7 +46,7 @@ img {
     padding: 8px;
 }
 
-.sidebar > h2, p {
+.sidebar > h2, .sidebar > p {
     padding-left: 5px;
 }
 
@@ -157,18 +162,29 @@ form input[type="submit"] {
 .projects {
     background-color: bisque;
     grid-row: 3/5;
+    position: relative;
+    padding: 15px;
+}
+
+.projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .headline {
-    padding: 15px;
     font-weight: bold;
+    padding-bottom: 15px;
 }
 
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: 1fr;
-    padding: 15px;
     gap: 15px;
 }
 
@@ -177,5 +193,53 @@ form input[type="submit"] {
     width: auto;
     background-color: aliceblue;
     padding: 20px 10px;
+    border-radius: 5px;
 }
 
+
+
+/* Announcements */
+.announcements {
+    height: auto;
+    background-color: bisque;
+    box-shadow: inset 0 5px 5px bisque;
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding within the specified height */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.announcements-container {
+    background-color: aliceblue;
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.announcements-item {
+    margin: 10px 10px;
+}
+
+.announcements-item > * {
+    font-size: small;
+}
+
+.announcements-item > h4 {
+    margin-bottom: 1px;
+}
