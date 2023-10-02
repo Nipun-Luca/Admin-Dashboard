@@ -243,3 +243,29 @@ form input[type="submit"] {
 .announcements-item > h4 {
     margin-bottom: 1px;
 }
+
+
+
+/* Trending */
+.trending {
+    height: auto;
+    background-color: bisque;
+    box-shadow: inset 0 5px 5px bisque;
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding within the specified height */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-container {
+    background-color: aliceblue;
+    padding: 10px;
+    flex: 1;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
